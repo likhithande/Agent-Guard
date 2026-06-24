@@ -1,0 +1,7 @@
+google-cloud-aiplatform==1.87.0
+google-cloud-storage==2.19.0
+google-genai==1.14.0
+gitpython==3.1.41
+google-adk==0.5.0
+Deprecated==1.2.18
+pypdf>=5.0.0

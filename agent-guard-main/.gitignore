@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+
+# Python
+.venv/
+venv/
+Backend/.venv/
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Build outputs
+/dist/
+/build/
+/Frontend/build/
+/Backend/build/
+.vite/
+
+# Frontend build output
+Frontend/dist/
+
+# ADK local state / bundled SDK
+ADK/.adk/
+ADK/google-cloud-sdk/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.*
+.env.local
+
+# Allow env templates
+!.env.example
+!Backend/.env.example
+
+# MacOS
+.DS_Store
+
+# ADK local state
+.adk/
+
+# Coverage
+coverage/
+
+# Misc
+*.pid
+*.seed
+*.tgz

@@ -1,0 +1,8 @@
+Sample Financial Statement
+Date: 2023-10-01
+Transaction 1: $1000.00 - Office Supplies - Approved
+Transaction 2: $5000.00 - Travel - Unapproved
+Transaction 3: $1000.00 - Office Supplies - Approved
+Duplicate Transaction Detected!
+Anomaly: Sudden spike in travel expenses.
+Risk: High.

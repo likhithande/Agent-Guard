@@ -1,0 +1,5 @@
+.rag-index.sqlite
+.corpora/
+.env
+__pycache__/
+*.pyc

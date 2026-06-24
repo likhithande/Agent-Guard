@@ -1,0 +1,15 @@
+{
+  "name": "agent-guard-root",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "cross-env": "^7.0.3"
+  },
+  "scripts": {
+    "dev": "cross-env VITE_API_URL=http://127.0.0.1:8002 concurrently -k -n BACKEND,FRONTEND -c red,cyan \"python -m uvicorn Backend.main:app --app-dir ./ --host 127.0.0.1 --reload --port 8002\" \"npm --prefix Frontend run dev\"",
+    "dev:8000": "cross-env VITE_API_URL=http://127.0.0.1:8000 concurrently -k -n BACKEND,FRONTEND -c red,cyan \"python -m uvicorn Backend.main:app --app-dir ./ --host 127.0.0.1 --reload --port 8000\" \"npm --prefix Frontend run dev\"",
+    "backend": "python -m uvicorn Backend.main:app --app-dir ./ --host 127.0.0.1 --reload --port 8002",
+    "frontend": "npm --prefix Frontend run dev",
+    "adk:rag:help": "python -m ADK.rag_agent --help"
+  }
+}

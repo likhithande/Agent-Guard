@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Backend (minimal) :8000",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": [
+        "-m",
+        "uvicorn",
+        "Backend.main:app",
+        "--app-dir",
+        "${workspaceFolder}/agent-guard-1",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/agent-guard-1"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Backend (full) :8000",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": [
+        "-m",
+        "uvicorn",
+        "Backend.full_app:app",
+        "--app-dir",
+        "${workspaceFolder}/agent-guard-1",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000",
+        "--reload"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/agent-guard-1"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Frontend :5173",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "options": {
+        "cwd": "${workspaceFolder}/agent-guard-1/Frontend",
+        "env": {
+          "VITE_API_URL": "http://localhost:8000"
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "ADK Web :8001",
+      "type": "shell",
+      "command": "adk",
+      "args": ["web", "--port", "8001", "${workspaceFolder}/agent-guard-1/ADK/adk_agents"],
+      "options": {
+        "cwd": "${workspaceFolder}/agent-guard-1/ADK"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
